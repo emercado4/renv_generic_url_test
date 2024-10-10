@@ -9,3 +9,9 @@ write.csv(data, "./renv_generic_url_test/test_file.csv", row.names = FALSE)
 # write another csv - iris data
 
 write.csv(iris, "./renv_generic_url_test/iris.csv", row.names = FALSE)
+
+iris_ratios <- iris %>%
+  mutate(Sepal.Ratio = Sepal.Length/Sepal.Width,
+        Petal.Ratio = Petal.Length/Petal.Width)
+
+iris_ratios
