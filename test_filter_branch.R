@@ -1,6 +1,7 @@
 library(dplyr)
 
 
+
 data <- tibble(a = seq(1,10000, 1), b = a/2, c = (b-1)*3)
 
 
@@ -15,3 +16,9 @@ iris_ratios <- iris %>%
         Petal.Ratio = Petal.Length/Petal.Width)
 
 iris_ratios
+
+iris_ratios_rounded <- iris_ratios %>%
+  mutate(Sepal.Ratio = round(Sepal.Ratio,2),
+        Petal.Ratio = round(Petal.Ratio, 2))
+
+iris_ratios_rounded
