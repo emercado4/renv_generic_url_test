@@ -17,3 +17,8 @@ iris_ratios <- iris %>%
 iris_ratios
 
 # Add a comment to code to test 
+
+new_data <- data %>%
+  mutate(d = (b*3)/4)
+
+write.csv(new_data, "./renv_generic_url_test/another_test_file.csv", row.names = FALSE)
